@@ -52,7 +52,7 @@ public class CoffeeMachine {
         }
     }
 
-    public void handleMenuChoice(String userChoice) {
+    private void handleMenuChoice(String userChoice) {
         switch (userChoice) {
             case "buy": {
                 System.out.println("\nWhat do you want to buy? 1 - espresso, 2 - latte, 3 - cappuccino, back - to main menu:");
@@ -82,7 +82,7 @@ public class CoffeeMachine {
         }
     }
 
-    public void buyCoffee(String coffeeType) {
+    private void buyCoffee(String coffeeType) {
         try {
             reduceInventory(coffeeType);
             System.out.println("I have enough resources, making you coffee!\n");
@@ -91,7 +91,7 @@ public class CoffeeMachine {
         }
     }
 
-    public void chargeCoffee(int coffeePrice) {
+    private void chargeCoffee(int coffeePrice) {
         machineEarnings += coffeePrice;
     }
 
